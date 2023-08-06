@@ -18,7 +18,7 @@ const http = require('http')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.status(200).sendFile(__dirname + '/page/status.html')
+  res.status(200).sendFile(__dirname + '/page/index.html')
 })
 
 app.get('/status', (req, res) => {
