@@ -1,1 +1,1 @@
-# basket.syu.kr
+# sugang.syu.kr
