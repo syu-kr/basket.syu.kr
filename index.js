@@ -31,6 +31,10 @@ app.get('/closed', (req, res) => {
   res.status(200).sendFile(__dirname + '/page/closed.html')
 })
 
+app.get('/warning', (req, res) => {
+  res.status(200).sendFile(__dirname + '/page/warning.html')
+})
+
 app.get('/api/basket', (req, res) => {
   const jsonData = JSON.parse(fs.readFileSync(__dirname + '/convert1.json', 'utf8'))
   res.status(200).json(jsonData)
@@ -38,6 +42,11 @@ app.get('/api/basket', (req, res) => {
 
 app.get('/api/closed', (req, res) => {
   const jsonData = JSON.parse(fs.readFileSync(__dirname + '/convert3.json', 'utf8'))
+  res.status(200).json(jsonData)
+})
+
+app.get('/api/warning', (req, res) => {
+  const jsonData = JSON.parse(fs.readFileSync(__dirname + '/convert4.json', 'utf8'))
   res.status(200).json(jsonData)
 })
 
