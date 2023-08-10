@@ -17,16 +17,27 @@ const http = require('http')
 
 const app = express()
 
-app.get('/', (req, res) => {
-  res.status(200).sendFile(__dirname + '/page/index.html')
+// app.get('/', (req, res) => {
+//   res.status(200).sendFile(__dirname + '/page/index.html')
+// })
+
+app.use('/', express.static(__dirname + '/public'))
+
+app.get('/basket', (req, res) => {
+  res.status(200).sendFile(__dirname + '/page/basket.html')
 })
 
-app.get('/status', (req, res) => {
-  res.redirect('https://basket.syu.kr/')
+app.get('/closed', (req, res) => {
+  res.status(200).sendFile(__dirname + '/page/closed.html')
 })
 
-app.get('/statusData', (req, res) => {
-  const jsonData = JSON.parse(fs.readFileSync(__dirname + '/convert.json', 'utf8'))
+app.get('/api/basket', (req, res) => {
+  const jsonData = JSON.parse(fs.readFileSync(__dirname + '/convert1.json', 'utf8'))
+  res.status(200).json(jsonData)
+})
+
+app.get('/api/closed', (req, res) => {
+  const jsonData = JSON.parse(fs.readFileSync(__dirname + '/convert3.json', 'utf8'))
   res.status(200).json(jsonData)
 })
 
