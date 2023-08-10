@@ -21,6 +21,7 @@ getRequest().then((data) => {
     tbody_tag += `
     <tr>
       <td nowrap><span style="color: white;">${rank}</span></td>
+      <td nowrap><span style="color: #5f6062;">${info['강좌번호']}</span></td>
       <td nowrap><span style="color: #5f6062;">${info['학부(과)']}</span></td>
       <td nowrap><strong><span style="color: white;">${info['강좌명']}</span></strong></td>
       <td nowrap><span style="color: #5f6062;">${info['교수명']}</span></td>
@@ -36,6 +37,7 @@ getRequest().then((data) => {
       <thead>
         <tr>
           <th scope="col" nowrap>순위</th>
+          <th scope="col" nowrap>강좌번호</th>
           <th scope="col" nowrap>학부(과)</th>
           <th scope="col" nowrap>강좌명</th>
           <th scope="col" nowrap>교수명</th>
