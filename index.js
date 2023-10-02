@@ -23,6 +23,14 @@ const app = express()
 
 app.use('/', express.static(__dirname + '/public'))
 
+app.get('/test_login', (req, res) => {
+  res.status(200).sendFile(__dirname + '/page/test_login.html')
+})
+
+app.get('/test', (req, res) => {
+  res.status(200).sendFile(__dirname + '/page/test.html')
+})
+
 app.get('/basket', (req, res) => {
   res.status(200).sendFile(__dirname + '/page/basket.html')
 })
