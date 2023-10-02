@@ -624,7 +624,7 @@
                   <nobr>컴퓨터공학부 전용</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_16_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(1)">신청</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(this, 1)">신청</button>
                 </td>
               </tr>
               <tr
@@ -674,7 +674,7 @@
                   <nobr>컴퓨터공학부 전용</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_16_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(2)">신청</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(this, 2)">신청</button>
                 </td>
               </tr>
               <tr
@@ -724,7 +724,7 @@
                   <nobr>컴퓨터공학부 전용</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_16_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(3)">신청</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(this, 3)">신청</button>
                 </td>
               </tr>
               <tr
@@ -774,7 +774,7 @@
                   <nobr>컴퓨터공학부 전용</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_16_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(4)">신청</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(this, 4)">신청</button>
                 </td>
               </tr>
             </tbody>
@@ -1254,7 +1254,7 @@
                   <nobr></nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_15_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(1)">취소</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(this, 1)">취소</button>
                 </td>
               </tr>
               <tr id="2-cancel" role="row" trindex="0" class="grid_body_row" style="background-color: rgb(249, 249, 249); display: none">
@@ -1296,7 +1296,7 @@
                   <nobr></nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_15_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(2)">취소</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(this, 2)">취소</button>
                 </td>
               </tr>
               <tr id="3-cancel" role="row" trindex="0" class="grid_body_row" style="background-color: rgb(249, 249, 249); display: none">
@@ -1338,7 +1338,7 @@
                   <nobr></nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_15_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(3)">취소</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(this, 3)">취소</button>
                 </td>
               </tr>
               <tr id="4-cancel" role="row" trindex="0" class="grid_body_row" style="background-color: rgb(249, 249, 249); display: none">
@@ -1380,7 +1380,7 @@
                   <nobr></nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_15_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(4)">취소</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(this, 4)">취소</button>
                 </td>
               </tr>
             </tbody>
@@ -1648,8 +1648,8 @@
         type="text"
         disabled="" />
     </div>
-    <!-- <div
-      id="loading"
+    <div
+      id="search"
       style="width: 1031px; height: 1000px; position: absolute; display: none; background-color: rgba(133, 133, 133, 0.25); z-index: 20000">
       <div style="position: absolute; left: 41.5%; top: 28%">
         <table class="progress" border="0" cellspacing="0" cellpadding="0">
@@ -1664,9 +1664,9 @@
           </tr>
         </table>
       </div>
-    </div> -->
+    </div>
     <div
-      id="loading"
+      id="wait"
       style="width: 1031px; height: 1000px; position: absolute; display: none; background-color: rgba(133, 133, 133, 0.25); z-index: 20000">
       <div
         id="netfunnel"
@@ -1760,34 +1760,44 @@
       }
     </script>
     <script>
-      function loadingOn() {
-        const loading = document.getElementById('loading')
+      function loadingOn(id) {
+        const loading = document.getElementById(id)
         loading.style.display = ''
       }
-      function loadingOff() {
-        const loading = document.getElementById('loading')
+      function loadingOff(id) {
+        const loading = document.getElementById(id)
         loading.style.display = 'none'
       }
-      function application(number) {
-        loadingOn()
+      function application(obj, number) {
+        loadingOn('wait')
+        obj.disabled = true
         setTimeout(function () {
           const a_row = document.getElementById(String(number) + '-application')
           const c_row = document.getElementById(String(number) + '-cancel')
           a_row.style.display = 'none'
           c_row.style.display = ''
-          loadingOff()
-        }, 1000)
+          loadingOff('wait')
+          obj.disabled = false
+        }, 1500)
       }
-      function cancel(number) {
-        loadingOn()
+      function cancel(obj, number) {
+        loadingOn('wait')
+        obj.disabled = true
         setTimeout(function () {
           const a_row = document.getElementById(String(number) + '-application')
           const c_row = document.getElementById(String(number) + '-cancel')
           a_row.style.display = ''
           c_row.style.display = 'none'
-          loadingOff()
-        }, 1000)
+          loadingOff('wait')
+          obj.disabled = false
+        }, 1500)
       }
+    </script>
+    <script>
+      loadingOn('search')
+      setTimeout(function () {
+        loadingOff('search')
+      }, 3000)
     </script>
   </body>
 </html>
