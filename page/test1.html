@@ -4319,7 +4319,9 @@
                   <div class="w2treeview_icon_navi"></div>
                 </td>
                 <td class="w2treeview_none"></td>
-                <td class="w2treeview_col_label"><span id="treeview1_label_1" class="w2treeview_label">공지사항</span></td>
+                <td class="w2treeview_col_label">
+                  <span id="treeview1_label_1" class="w2treeview_label w2treeview_select_node">공지사항</span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -4338,8 +4340,8 @@
                   <div class="w2treeview_icon_navi"></div>
                 </td>
                 <td class="w2treeview_none"></td>
-                <td class="w2treeview_col_label">
-                  <span id="treeview1_label_2" class="w2treeview_label w2treeview_select_node">수강신청</span>
+                <td class="w2treeview_col_label" onclick="location.href='https://sugang.syu.kr/test2'">
+                  <span id="treeview1_label_2" class="w2treeview_label">수강신청</span>
                 </td>
               </tr>
             </tbody>
@@ -4398,7 +4400,7 @@
         id="groupMainTab"
         style="position: absolute; overflow-y: hidden; white-space: nowrap; left: 0px; top: 5px; width: 100%; height: 27px"
         class="w2group trans">
-        <div id="tabManager1tab0" style="display: inline; cursor: pointer; float: left" class="tab_deselected">
+        <div id="tabManager1tab1" style="display: inline; cursor: pointer; float: left" class="tab_selected">
           <table class="tab_main" style="display: inline" cellpadding="0" cellspacing="0">
             <tbody>
               <tr>
@@ -4413,26 +4415,6 @@
                   style="width: 20px"
                   tabtype="delete"
                   tabidx="0"
-                  onmouseout="this.className = &#39;tab_right&#39;"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="tabManager1tab1" style="display: inline; cursor: pointer; float: left" class="tab_selected">
-          <table class="tab_main" style="display: inline" cellpadding="0" cellspacing="0">
-            <tbody>
-              <tr>
-                <td class="tab_left" style="width: 10px" tabidx="1"></td>
-                <td class="tab_mid" tabidx="1">
-                  <div style="width: 110px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap" tabidx="1" title="수강신청">
-                    수강신청
-                  </div>
-                </td>
-                <td
-                  class="tab_right"
-                  style="width: 20px"
-                  tabtype="delete"
-                  tabidx="1"
                   onmouseout="this.className = &#39;tab_right&#39;"></td>
               </tr>
             </tbody>
@@ -4457,7 +4439,7 @@
           style="position: absolute; height: 806px; width: 100%; left: 0px; top: 2px; z-index: 110; visibility: visible">
           <iframe
             id="iframe1"
-            src="files/websquare(1).html"
+            src="files/websquare(1-0).html"
             style="position: absolute; height: 800px; width: 100%; left: 0px; top: 1px"
             class="w2iframe"
             frameborder="0"></iframe>
@@ -4727,7 +4709,12 @@
           </tbody>
         </table>
       </div>
-      <img id="logout" src="files/btn_logout.gif" style="position: absolute; left: 288px; top: 6px" class="w2image" />
+      <img
+        id="logout"
+        src="files/btn_logout.gif"
+        style="position: absolute; left: 288px; top: 6px; cursor: pointer"
+        class="w2image"
+        onclick="location.href='https://sugang.syu.kr/test_login'" />
     </div>
     <img id="image38" src="files/logo.gif" style="position: absolute; left: 22px; top: 5px; width: 515px; height: 22px" class="w2image" />
   </body>

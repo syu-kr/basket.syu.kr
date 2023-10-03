@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>수강신청</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
-    <link rel="stylesheet" type="text/css" href="/files/sugang.css" />
+    <link rel="stylesheet" type="text/css" href="sugang.css" />
     <style>
       #warning-1 {
         position: absolute;
@@ -1652,7 +1652,7 @@
       id="search"
       style="width: 1031px; height: 1000px; position: absolute; display: none; background-color: rgba(133, 133, 133, 0.25); z-index: 20000">
       <div style="position: absolute; left: 41.5%; top: 28%">
-        <table class="progress" border="0" cellspacing="0" cellpadding="0">
+        <table class="progress" border="0" cellspacing="0" cellpadding="0" style="width: 180px; height: 80px; background-color: white">
           <tr>
             <td style="text-align: center">
               <img src="./progress_name.gif" style="padding-bottom: 7px" /><br />
@@ -1710,7 +1710,7 @@
               <b>서비스 <span style="color: #013dc1">접속대기 중</span>입니다.</b>
             </div>
             <div style="text-align: right; font-size: 9pt; color: #4d4b4c; padding-top: 4px; height: 17px">
-              <b>예상대기시간 : <span style="text-decoration: underline">0시간 0분 2초</span></b>
+              <b>예상대기시간 : <span style="text-decoration: underline">0시간 0분 4초</span></b>
             </div>
             <div
               style="padding-top: 6px; padding-bottom: 6px; vertical-align: center; width: 400px; height: 20px"
@@ -1747,14 +1747,18 @@
       const warn2 = document.getElementById('warning-2')
       if (navigator.platform) {
         if (filter.indexOf(window.navigator.platform.toLowerCase()) < 0) {
-          warn1.innerHTML = '<h1 style="color: #cccccc">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
+          warn1.innerHTML =
+            '<h1 style="color: #cccccc; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
           warn1.style.left = '24%'
-          warn2.innerHTML = '<h1 style="color: #cccccc">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
+          warn2.innerHTML =
+            '<h1 style="color: #cccccc; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
           warn2.style.left = '24%'
         } else {
-          warn1.innerHTML = '<h1 style="color: #cccccc">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
+          warn1.innerHTML =
+            '<h1 style="color: #cccccc; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
           warn1.style.left = '22%'
-          warn2.innerHTML = '<h1 style="color: #cccccc">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
+          warn2.innerHTML =
+            '<h1 style="color: #cccccc; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
           warn2.style.left = '22%'
         }
       }
@@ -1778,7 +1782,7 @@
           c_row.style.display = ''
           loadingOff('wait')
           obj.disabled = false
-        }, 1500)
+        }, 2500)
       }
       function cancel(obj, number) {
         loadingOn('wait')
@@ -1790,14 +1794,14 @@
           c_row.style.display = 'none'
           loadingOff('wait')
           obj.disabled = false
-        }, 1500)
+        }, 2500)
       }
     </script>
     <script>
       loadingOn('search')
       setTimeout(function () {
         loadingOff('search')
-      }, 3000)
+      }, 1500)
     </script>
   </body>
 </html>

@@ -27,8 +27,12 @@ app.get('/test_login', (req, res) => {
   res.status(200).sendFile(__dirname + '/page/test_login.html')
 })
 
-app.get('/test', (req, res) => {
-  res.status(200).sendFile(__dirname + '/page/test.html')
+app.get('/test1', (req, res) => {
+  res.status(200).sendFile(__dirname + '/page/test1.html')
+})
+
+app.get('/test2', (req, res) => {
+  res.status(200).sendFile(__dirname + '/page/test2.html')
 })
 
 app.get('/basket', (req, res) => {
