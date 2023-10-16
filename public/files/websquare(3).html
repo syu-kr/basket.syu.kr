@@ -141,7 +141,8 @@
         class="w2trigger w2trigger_table btn_add4"
         cellpadding="0"
         cellspacing="0"
-        onkeydown="if( event.keyCode == 32 || event.keyCode == 13 ) click();">
+        onkeydown="if( event.keyCode == 32 || event.keyCode == 13 ) click();"
+        onclick="alert('사용할 수 없습니다.')">
         <tbody>
           <tr id="trF_LECT_INFO_row" class="">
             <td id="trF_LECT_INFO_left" class="w2trigger_col_left w2trigger_left"></td>
@@ -600,7 +601,7 @@
                   <nobr>1</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_5_">
-                  <nobr>1234567</nobr>
+                  <nobr>100001</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_6_" style="text-align: left">
                   <nobr>하급 코딩</nobr>
@@ -612,7 +613,7 @@
                   <nobr>21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_9_" style="text-align: left">
-                  <nobr>김상윤</nobr>
+                  <nobr>삼육메주</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_10_">
                   <nobr>월1~21</nobr>
@@ -650,7 +651,7 @@
                   <nobr>2</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_5_">
-                  <nobr>1234567</nobr>
+                  <nobr>100002</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_6_" style="text-align: left">
                   <nobr>중급 코딩</nobr>
@@ -662,7 +663,7 @@
                   <nobr>21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_9_" style="text-align: left">
-                  <nobr>김상윤</nobr>
+                  <nobr>삼육메주</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_10_">
                   <nobr>화1~21</nobr>
@@ -700,7 +701,7 @@
                   <nobr>3</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_5_">
-                  <nobr>1234567</nobr>
+                  <nobr>100003</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_6_" style="text-align: left">
                   <nobr>고급 코딩</nobr>
@@ -712,7 +713,7 @@
                   <nobr>21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_9_" style="text-align: left">
-                  <nobr>김상윤</nobr>
+                  <nobr>삼육메주</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_10_">
                   <nobr>수1~21</nobr>
@@ -741,31 +742,81 @@
                   <nobr>1학년</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_2_">
+                  <nobr>일반선택</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_3_" style="text-align: left">
+                  <nobr>공통(교양)</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_4_">
+                  <nobr>4</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_5_">
+                  <nobr>100004</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_6_" style="text-align: left">
+                  <nobr>5차 산업시대의 혁명</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_7_">
+                  <nobr></nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_8_">
+                  <nobr>21</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_9_" style="text-align: left">
+                  <nobr>삼육메주</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_10_">
+                  <nobr>목1~21</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_11_">
+                  <nobr>제1실습관 401호</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_14_">
+                  <nobr>컴퓨터공학부 수강불가</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_16_">
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(this, 4)">신청</button>
+                </td>
+              </tr>
+              <tr
+                id="5-application"
+                role="row"
+                trindex="0"
+                class="grid_body_row w2grid_hidedRow"
+                style="background-color: rgb(249, 249, 249)">
+                <td class="gridBodyDefault gridBodyDefault_rowNumber">-</td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_0_">
+                  <nobr></nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_1_">
+                  <nobr>1학년</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_2_">
                   <nobr>채플</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_3_" style="text-align: left">
                   <nobr>컴퓨터공학부</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_4_">
-                  <nobr>4</nobr>
+                  <nobr>5</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_5_">
-                  <nobr>1234567</nobr>
+                  <nobr>100005</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_6_" style="text-align: left">
-                  <nobr>예배를 알려주겠다.</nobr>
+                  <nobr>채플</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_7_">
                   <nobr></nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_8_">
-                  <nobr>99</nobr>
+                  <nobr>21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_9_" style="text-align: left">
-                  <nobr>김상윤 목사</nobr>
+                  <nobr>교목처</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_10_">
-                  <nobr>목1~21</nobr>
+                  <nobr>금1~21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_11_">
                   <nobr>대강당</nobr>
@@ -774,7 +825,7 @@
                   <nobr>컴퓨터공학부 전용</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM1_F0_columnstyle_16_">
-                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(this, 4)">신청</button>
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="application(this, 5)">신청</button>
                 </td>
               </tr>
             </tbody>
@@ -860,7 +911,7 @@
                 role="gridcell"
                 class="gridFooterTDDefault gridFooterTDDefault_data gdM1_F0_footer__column2"
                 footer_id="total_cnt">
-                <nobr>0건</nobr>
+                <nobr><span id="basket">5</span>건</nobr>
               </td>
             </tr>
           </tbody>
@@ -884,6 +935,7 @@
         style="position: absolute; height: 18px; width: 55px; left: 209px; top: 5px; text-align: center"
         class="w2input common_input w2input_readonly"
         type="text"
+        value="0"
         readonly="" />
     </div>
     <div
@@ -1230,7 +1282,7 @@
                   <nobr>1</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_4_">
-                  <nobr>1234567</nobr>
+                  <nobr>100001</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_5_" style="text-align: left">
                   <nobr>하급 코딩</nobr>
@@ -1239,7 +1291,7 @@
                   <nobr>21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_7_" style="text-align: left">
-                  <nobr>김상윤</nobr>
+                  <nobr>삼육메주</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_8_">
                   <nobr>월1~21</nobr>
@@ -1272,7 +1324,7 @@
                   <nobr>2</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_4_">
-                  <nobr>1234567</nobr>
+                  <nobr>100002</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_5_" style="text-align: left">
                   <nobr>중급 코딩</nobr>
@@ -1281,7 +1333,7 @@
                   <nobr>21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_7_" style="text-align: left">
-                  <nobr>김상윤</nobr>
+                  <nobr>삼육메주</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_8_">
                   <nobr>화1~21</nobr>
@@ -1314,7 +1366,7 @@
                   <nobr>3</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_4_">
-                  <nobr>1234567</nobr>
+                  <nobr>100003</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_5_" style="text-align: left">
                   <nobr>고급 코딩</nobr>
@@ -1323,7 +1375,7 @@
                   <nobr>21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_7_" style="text-align: left">
-                  <nobr>김상윤</nobr>
+                  <nobr>삼육메주</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_8_">
                   <nobr>수1~21</nobr>
@@ -1347,28 +1399,70 @@
                   <nobr></nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_1_">
+                  <nobr>일반선택</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_2_" style="text-align: left">
+                  <nobr>공통(교양)</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_3_">
+                  <nobr>4</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_4_">
+                  <nobr>100004</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_5_" style="text-align: left">
+                  <nobr>5차 산업시대의 혁명</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_6_">
+                  <nobr>21</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_7_" style="text-align: left">
+                  <nobr>삼육메주</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_8_">
+                  <nobr>목1~21</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_9_">
+                  <nobr>제1실습관 401호</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_12_" style="text-align: left">
+                  <nobr>일반</nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_13_">
+                  <nobr></nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_15_">
+                  <button type="button" style="width: 100%; height: 100%" tabindex="-1" onclick="cancel(this, 4)">취소</button>
+                </td>
+              </tr>
+              <tr id="5-cancel" role="row" trindex="0" class="grid_body_row" style="background-color: rgb(249, 249, 249); display: none">
+                <td class="gridBodyDefault gridBodyDefault_rowNumber">-</td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_0_">
+                  <nobr></nobr>
+                </td>
+                <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_1_">
                   <nobr>채플</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_2_" style="text-align: left">
                   <nobr>컴퓨터공학부</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_3_">
-                  <nobr>4</nobr>
+                  <nobr>5</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_4_">
-                  <nobr>1234567</nobr>
+                  <nobr>100005</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_5_" style="text-align: left">
-                  <nobr>예배를 알려주겠다.</nobr>
+                  <nobr>채플</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_6_">
-                  <nobr>99</nobr>
+                  <nobr>21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_7_" style="text-align: left">
-                  <nobr>김상윤 목사</nobr>
+                  <nobr>교목처</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_8_">
-                  <nobr>목1~21</nobr>
+                  <nobr>금1~21</nobr>
                 </td>
                 <td class="gridBodyDefault gridBodyDefault_data gdM2_F0_columnstyle_9_">
                   <nobr>대강당</nobr>
@@ -1452,7 +1546,7 @@
                 role="gridcell"
                 class="gridFooterTDDefault gridFooterTDDefault_data gdM2_F0_footer__column2"
                 footer_id="total_cnt">
-                <nobr>0건</nobr>
+                <nobr><span id="application">0</span>건</nobr>
               </td>
             </tr>
           </tbody>
@@ -1532,6 +1626,9 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      <div style="position: absolute; left: 28px; top: 29px; color: red">
+        <strong>본 사이트는 실제 수강신청 사이트가 아닙니다.</strong>
       </div>
     </div>
     <div id="group4" style="position: absolute; top: 0px; left: 0px; width: 1030px; height: 97px" class="w2group detail_box">
@@ -1710,13 +1807,15 @@
               <b>서비스 <span style="color: #013dc1">접속대기 중</span>입니다.</b>
             </div>
             <div style="text-align: right; font-size: 9pt; color: #4d4b4c; padding-top: 4px; height: 17px">
-              <b>예상대기시간 : <span style="text-decoration: underline">0시간 0분 4초</span></b>
+              <b
+                >예상대기시간 : <span style="text-decoration: underline">0시간 0분 <span id="time">0</span>초</span></b
+              >
             </div>
             <div
               style="padding-top: 6px; padding-bottom: 6px; vertical-align: center; width: 400px; height: 20px"
               id="NetFunnel_Loading_Popup_Progressbar">
-              <div style="width: 400; height: 20; background-color: #b6dffd">
-                <div style="width: 200; height: 20; background-color: #2a509b"></div>
+              <div style="width: 400px; height: 20px; background-color: #b6dffd">
+                <div id="progressbar"></div>
               </div>
             </div>
             <div style="background-color: #ededed; width: 400px; padding-bottom: 8px; overflow: hidden">
@@ -1749,21 +1848,22 @@
         if (filter.indexOf(window.navigator.platform.toLowerCase()) < 0) {
           warn1.innerHTML =
             '<h1 style="color: #cccccc; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
-          warn1.style.left = '24%'
+          warn1.style.left = '28%'
           warn2.innerHTML =
             '<h1 style="color: #cccccc; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
-          warn2.style.left = '24%'
+          warn2.style.left = '28%'
         } else {
           warn1.innerHTML =
             '<h1 style="color: #cccccc; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
-          warn1.style.left = '22%'
+          warn1.style.left = '23%'
           warn2.innerHTML =
             '<h1 style="color: #cccccc; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;">본 사이트는 실제 수강신청 사이트가 아닙니다.</h1>'
-          warn2.style.left = '22%'
+          warn2.style.left = '23%'
         }
       }
     </script>
     <script>
+      const time = 3
       function loadingOn(id) {
         const loading = document.getElementById(id)
         loading.style.display = ''
@@ -1775,26 +1875,52 @@
       function application(obj, number) {
         loadingOn('wait')
         obj.disabled = true
-        setTimeout(function () {
-          const a_row = document.getElementById(String(number) + '-application')
-          const c_row = document.getElementById(String(number) + '-cancel')
-          a_row.style.display = 'none'
-          c_row.style.display = ''
-          loadingOff('wait')
-          obj.disabled = false
-        }, 2500)
+        let percent = 0
+        let realTime = time
+        const checker = setInterval(function () {
+          percent += 400 / time
+          document.getElementById('time').innerText = realTime
+          document.getElementById('progressbar').innerHTML =
+            '<div style="width: ' + (percent > 390 ? 400 : percent) + 'px; height: 20px; background-color: #2a509b"></div>'
+          if (realTime-- <= 0) {
+            const a_row = document.getElementById(String(number) + '-application')
+            const c_row = document.getElementById(String(number) + '-cancel')
+            a_row.style.display = 'none'
+            c_row.style.display = ''
+            loadingOff('wait')
+            obj.disabled = false
+            document.getElementById('progressbar').innerHTML = '<div style="width: 0px; height: 20px; background-color: #2a509b"></div>'
+            clearInterval(checker)
+            document.getElementById('basket').innerText = Number(document.getElementById('basket').innerText) - 1
+            document.getElementById('application').innerText = Number(document.getElementById('application').innerText) + 1
+            document.getElementById('ipI_TOT_LCTPT').value = Number(document.getElementById('ipI_TOT_LCTPT').value) + 21
+          }
+        }, 1000)
       }
       function cancel(obj, number) {
         loadingOn('wait')
         obj.disabled = true
-        setTimeout(function () {
-          const a_row = document.getElementById(String(number) + '-application')
-          const c_row = document.getElementById(String(number) + '-cancel')
-          a_row.style.display = ''
-          c_row.style.display = 'none'
-          loadingOff('wait')
-          obj.disabled = false
-        }, 2500)
+        let percent = 0
+        let realTime = time
+        const checker = setInterval(function () {
+          percent += 400 / time
+          document.getElementById('time').innerText = realTime
+          document.getElementById('progressbar').innerHTML =
+            '<div style="width: ' + (percent > 390 ? 400 : percent) + 'px; height: 20px; background-color: #2a509b"></div>'
+          if (realTime-- <= 0) {
+            const a_row = document.getElementById(String(number) + '-application')
+            const c_row = document.getElementById(String(number) + '-cancel')
+            a_row.style.display = ''
+            c_row.style.display = 'none'
+            loadingOff('wait')
+            obj.disabled = false
+            document.getElementById('progressbar').innerHTML = '<div style="width: 0px; height: 20px; background-color: #2a509b"></div>'
+            clearInterval(checker)
+            document.getElementById('basket').innerText = Number(document.getElementById('basket').innerText) + 1
+            document.getElementById('application').innerText = Number(document.getElementById('application').innerText) - 1
+            document.getElementById('ipI_TOT_LCTPT').value = Number(document.getElementById('ipI_TOT_LCTPT').value) - 21
+          }
+        }, 1000)
       }
     </script>
     <script>

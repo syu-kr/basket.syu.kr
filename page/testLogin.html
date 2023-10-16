@@ -109,8 +109,8 @@
     <div class="login-card">
       <h1>삼육대학교/대학원<br />수강신청</h1>
       <br />
-      <input type="text" name="userId" tabindex="1" id="userId" placeholder="학번" />
-      <input type="password" name="userPwd" tabindex="2" id="userPwd" placeholder="비밀번호" />
+      <input type="text" name="userId" tabindex="1" id="userId" placeholder="학번 (필요 없음)" />
+      <input type="password" name="userPwd" tabindex="2" id="userPwd" placeholder="비밀번호 (필요 없음)" />
       <input
         type="submit"
         name="login"
@@ -132,6 +132,26 @@
         ">
         본 사이트는 실제 수강신청 사이트가 아닙니다.
       </h1>
+      <h1
+        id="notice"
+        style="
+          color: #cccccc;
+          -ms-user-select: none;
+          -moz-user-select: -moz-none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          user-select: none;
+        "></h1>
     </div>
+    <script>
+      const filter = 'win16|win32|win64|mac|macintel'
+      if (navigator.platform) {
+        if (filter.indexOf(window.navigator.platform.toLowerCase()) < 0) {
+          document.getElementById('notice').innerText = '컴퓨터 / PC 환경을 권장합니다.'
+        } else {
+          document.getElementById('notice').innerText = '브라우저 전체 화면을 권장합니다.'
+        }
+      }
+    </script>
   </body>
 </html>
