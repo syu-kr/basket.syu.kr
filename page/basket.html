@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>SYU SUGANG - BASKET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-13FLHMGH10"></script>
     <script>
@@ -25,38 +26,127 @@
       crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <script type="text/javascript" src="/js/basket.js"></script>
+    <style>
+      /* .table-size {
+        height: 2107px;
+      } */
+      .title {
+        font-size: 24pt;
+      }
+      .drag {
+        padding: 0px 0px 10px 0px;
+        font-size: 9px;
+        color: #ff6262;
+        display: none;
+      }
+      @media (width < 992px) {
+        /* .table-size {
+          height: 1705px;
+        } */
+        .title {
+          font-size: 20pt;
+        }
+        table {
+          font-size: 15px;
+        }
+        .table > :not(caption) > * > * {
+          /* padding: 60px; */
+          /* font-size: 14px; */
+          padding: 0.3rem 0.3rem;
+        }
+        .rank {
+          width: 23px;
+        }
+      }
+      @media (width < 768px) {
+        /* .table-size {
+          height: 1250px;
+        } */
+        .drag {
+          display: inline-block;
+        }
+        .title {
+          font-size: 18pt;
+        }
+        table {
+          font-size: 11px;
+        }
+        .table > :not(caption) > * > * {
+          padding: 0.2rem 0.2rem;
+          /* padding: 60px; */
+          /* font-size: 11px; */
+        }
+        .rank {
+          width: 16px;
+        }
+      }
+      @media (width < 576px) {
+        /* .table-size {
+          height: 918px;
+        } */
+        .drag {
+          display: inline-block;
+        }
+        .title {
+          font-size: 13pt;
+        }
+        table {
+          font-size: 9px;
+        }
+        .table > :not(caption) > * > * {
+          padding: 0.1rem 0.1rem;
+          /* padding: 60px; */
+          /* font-size: 8px; */
+        }
+        .rank {
+          width: 13px;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <div style="padding: 20px 0px 0px 20px">
-      <span style="font-size: 1.7rem">
-        <img
-          src="https://www.syu.ac.kr/wp-content/uploads/2018/05/pg_thum.png"
-          width="35px"
-          height="auto"
-          style="vertical-align: text-bottom" />
-        <strong>장바구니 경쟁률 현황</strong>
-      </span>
-    </div>
-    <hr />
-    <!-- <div style="padding: 0px 0px 20px 20px">
-      <strong>
-        <span style="font-size: 1.3rem" id="time"></span>
-      </strong>
-    </div> -->
-    <div style="padding: 0px 0px 20px 20px">
-      <div style="font-size: 1.3rem; color: red">
-        <strong>※ 장바구니 최종 경쟁률 입니다.</strong>
+  <body style="background-color: #212529">
+    <div style="padding: 3rem; text-align: center">
+      <div>
+        <img src="/logo.png" width="128px" />
       </div>
-      <div style="font-size: 1.3rem; color: red">
-        <strong>※ 본 수강신청에서 경쟁률이 더 높을 수 있습니다.</strong>
+      <div class="title" style="padding: 3rem; color: white">
+        <strong>삼육대학교 수강신청<br />장바구니 경쟁률 현황</strong>
       </div>
-      <div>(표가 짤린 경우 옆으로 드래그 하면 확인할 수 있습니다.)</div>
+      <hr style="color: white" />
+      <div style="color: yellow">◯ 예비 수강신청 기간 : 2024년 07월 29일(월) 10:00 ~ 07월 31일(수) 17:00</div>
+      <div style="color: yellow">◯ 본 수강신청 기간 : 2024년 08월 05일(월) 10:00 ~ 08월 07일(수) 17:00</div>
+      <hr style="color: white" />
+      <p style="color: red">※ 실시간 집계중..</p>
+      <p id="time" style="color: white"></p>
     </div>
-    <div style="padding: 0px 0px 20px 20px">
-      <span style="font-size: 1.2rem">검색: </span>
+    <!-- <div style="padding: 10px">
+      <span style="font-size: 1.2rem; color: white">검색: </span>
       <input type="search" id="search" />
+    </div> -->
+    <div class="table-size">
+      <div class="table-responsive">
+        <div class="drag">표가 짤린 경우 표를 옆으로 드래그 하세요.</div>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th style="text-align: center" scope="col" nowrap>순위</th>
+              <th scope="col" style="color: #5f6062" nowrap>강좌번호</th>
+              <th scope="col" style="color: #5f6062" nowrap>학부(과)</th>
+              <th scope="col" nowrap>과목명</th>
+              <th scope="col" style="color: #5f6062" nowrap>교수명</th>
+              <th scope="col" nowrap>제한인원</th>
+              <th scope="col" nowrap>장바구니</th>
+              <th style="text-align: center" scope="col" nowrap>경쟁률</th>
+            </tr>
+          </thead>
+          <tbody id="info"></tbody>
+        </table>
+      </div>
     </div>
-    <span id="info"></span>
-    <script type="text/javascript" src="/js/search.js"></script>
+    <div id="number-button-wrapper" style="padding: 20px 0px 35px 0px; text-align: center"></div>
+    <div style="background-color: #0000001f; padding: 2rem; text-align: center">
+      <div style="color: white; font-size: 6pt">Copyright(C) 2023 - 2024 SYU KR (김상윤). All rights reserved.</div>
+    </div>
+    <!-- <script type="text/javascript" src="/js/search.js"></script> -->
   </body>
 </html>
