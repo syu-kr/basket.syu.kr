@@ -47,12 +47,12 @@ app.get('/warning', (req, res) => {
   res.status(200).sendFile(__dirname + '/page/warning.html')
 })
 
-app.get('/api/live', (req, res) => {
+app.get('/api/basket', (req, res) => {
   const jsonData = JSON.parse(fs.readFileSync(__dirname + '/convert0.json', 'utf8'))
   res.status(200).json(jsonData)
 })
 
-app.get('/api/basket', (req, res) => {
+app.get('/api/live', (req, res) => {
   const jsonData = JSON.parse(fs.readFileSync(__dirname + '/convert1.json', 'utf8'))
   res.status(200).json(jsonData)
 })
