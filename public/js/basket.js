@@ -3,7 +3,7 @@ const COUNT_PER_PAGE = 50
 let datas = []
 
 async function getRequest() {
-  const getResponse = await fetch('/api/basket', {
+  const getResponse = await fetch('/api/live', {
     method: 'get',
   })
   const getJson = await getResponse.json()
